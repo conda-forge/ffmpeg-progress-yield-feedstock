@@ -1,5 +1,5 @@
 {% set name = "ffmpeg-progress-yield" %}
-{% set version = "0.2.0" %}
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://github.com/slhck/ffmpeg-progress-yield/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 7426c6cf70091c41cf15250a47fe772e00f0303fb9c38cc91baaf6cc6b244698
+  sha256: 1e2c3731d0f0ab905481a190099706ad12506d5d680a1093bd874d366e88c4d0
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - ffmpeg-progress-yield = ffmpeg_progress_yield.__main__:main
 
@@ -39,7 +39,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'Run an ffmpeg command with progress'
+  summary: Run an ffmpeg command with progress
   description: |
     Run an ffmpeg command with progress.
     An external installation of ffmpeg is reuqired.
