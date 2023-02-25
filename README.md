@@ -1,11 +1,11 @@
-About ffmpeg-progress-yield
-===========================
+About ffmpeg-progress-yield-feedstock
+=====================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ffmpeg-progress-yield-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/slhck/ffmpeg-progress-yield
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ffmpeg-progress-yield-feedstock/blob/main/LICENSE.txt)
 
 Summary: Run an ffmpeg command with progress
 
