@@ -11,18 +11,18 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - ffmpeg-progress-yield = ffmpeg_progress_yield.__main__:main
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - tqdm >=4.38.0
     - colorama >=0.4.3
 
@@ -31,6 +31,7 @@ test:
     - ffmpeg_progress_yield
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
     - ffmpeg-progress-yield -h
