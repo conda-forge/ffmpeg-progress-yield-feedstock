@@ -1,5 +1,5 @@
 {% set name = "ffmpeg-progress-yield" %}
-{% set version = "0.11.3" %}
+{% set version = "0.12.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://github.com/slhck/ffmpeg-progress-yield/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: b5d604a93afe56aad21528268e5c8b930ac7c3b6864270a7f1fbaf6bc4eb8a42
+  sha256: 4c97282b553f5270ce3954843a02aec885eb71414d4f673f2367da05bbbccb2c
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - ffmpeg-progress-yield = ffmpeg_progress_yield.__main__:main
